@@ -1,0 +1,33 @@
+@import "_variables";
+
+@font-face {
+  font-family: "fontBurgerQuizzTitle";
+  src: url("/assets/Fonts/Horsal.ttf");
+}
+
+@font-face {
+  font-family: "fontBurgerQuizz";
+  src: url("/assets/Fonts/HooliganJF.ttf");
+}
+
+.header {
+  padding: 5px 25px;
+  border-bottom: solid 1px $mayo;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: auto;
+    font-family: "fontBurgerQuizzTitle";
+    color: $segundary;
+    font-size: 5rem;
+
+    .ketchup {
+      color: $ketchup;
+    }
+
+    .mayo {
+      color: $mayo;
+    }
+  }
+}
