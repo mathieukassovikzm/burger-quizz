@@ -1,14 +1,14 @@
 export enum TeamEnum {
   KETCHUP = 'ketchup',
   MAYO = 'mayo',
-  MENU = 'menu',
-  DESSERT = 'dessert',
-  ADDITION = 'addition',
-  BURGER2LAMORT = 'burger2lamort'
 }
 export enum CategoriesEnum {
   NUGGETS = 'nuggets',
   SELPOIVRE = 'selpoivre',
+  MENU = 'menu',
+  DESSERT = 'dessert',
+  ADDITION = 'addition',
+  BURGERDELAMORT = 'burger2lamort',
 }
 
 export interface IReponseProp {
@@ -33,5 +33,17 @@ export interface IQuestionsNuggets {
 }
 
 export interface IQuestionsSelPoivre {
+  questions: IQuestion[];
+}
+
+export interface IQuestionsMenu {
+  questions: IQuestion[];
+}
+
+export interface IQuestionsAddition {
+  questions: IQuestion[];
+}
+
+export interface IQuestionsBurger2laMort {
   questions: IQuestion[];
 }
