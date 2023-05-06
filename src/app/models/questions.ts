@@ -11,8 +11,13 @@ export enum CategoriesEnum {
   BURGERDELAMORT = 'burger2lamort',
 }
 
+export interface IProposition {
+  letter: string;
+  txt: string;
+}
+
 export interface IReponseProp {
-  propositions: string[];
+  propositions: IProposition[];
   goodrep: number;
 }
 

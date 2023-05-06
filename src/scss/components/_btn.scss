@@ -1,18 +1,22 @@
-.btn{
+.btn {
   font-family: fontBurgerQuizz;
   font-size: 5rem;
   background-color: inherit;
   border: inherit;
-  &.ketchup{
-    color: $ketchup;
+
+  &.ketchup {
+    color: $color-ketchup;
   }
-  &.mayo{
-    color: $mayo;
+
+  &.mayo {
+    color: $color-mayo;
   }
-  &:hover{
+
+  &:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
+
   &:focus {
     outline: inherit;
   }

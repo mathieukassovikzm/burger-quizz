@@ -1,0 +1,13 @@
+$question-width: 45%;
+
+.main-container {
+  display: flex;
+
+  .questions {
+    width: $question-width;
+  }
+
+  .scores {
+    width: (100% - $question-width)/2;
+  }
+}

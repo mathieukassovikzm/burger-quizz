@@ -3,11 +3,10 @@ import { Router } from '@angular/router';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 
 @Component({
-  selector: 'app-page-equipes',
-  templateUrl: './page-equipes.component.html',
-  styleUrls: ['./page-equipes.component.scss'],
+  selector: 'app-nuggets-rules',
+  templateUrl: './nuggets-rules.component.html',
 })
-export class PageEquipesComponent implements OnInit {
+export class NuggetsRulesComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {}
@@ -15,8 +14,9 @@ export class PageEquipesComponent implements OnInit {
   goToNextPage() {
     this.router.navigate([
       `${LstPagesMap.get(Pages.NUGGETS)?.route}/${
-        LstPagesMap.get(Pages.VIDEO)?.route
+        LstPagesMap.get(Pages.QUESTIONS)?.route
       }`,
+      0,
     ]);
   }
 }

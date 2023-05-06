@@ -2,10 +2,12 @@
   width: 90%;
   margin: auto;
   padding: 20px 0;
+
   .top {
     .title {
       display: flex;
       justify-content: center;
+
       h1,
       h2 {
         font-family: fontBurgerQuizzTitle;
@@ -13,16 +15,20 @@
         font-size: 5em;
         margin-right: 10px;
       }
+
       h1 {
-        color: $ketchup;
+        color: $color-ketchup;
       }
+
       h2 {
         color: #6b9742;
       }
     }
+
     .buttons {
       display: flex;
       justify-content: center;
+
       button {
         margin-top: 20px;
         font-family: fontBurgerQuizzTitle;
@@ -34,6 +40,7 @@
 
   .container-flex {
     display: flex;
+
     .panel-l,
     .panel-r {
       width: 50%;
@@ -46,16 +53,19 @@
             flex-wrap: nowrap;
             align-items: center;
           }
+
           .g-q-r {
             width: 90%;
             padding: 5px 0;
           }
+
           h2 {
             font-family: fontBurgerQuizzTitle;
             font-weight: inherit;
             font-size: 3em;
             margin-right: 10px;
           }
+
           p {
             font-size: 1.8em;
           }
@@ -68,24 +78,28 @@
     .top {
       .buttons {
         button {
-          color: $mayo;
+          color: $color-mayo;
+
           &:hover {
-            color: $lightMayo;
+            color: $light-mayo;
           }
         }
       }
     }
+
     .panel-l,
     .panel-r {
       .questions {
         .question {
-          color: $mayo;
+          color: $color-mayo;
+
           .g-q-r {
-            border-top: solid 1px $mayo;
-            border-bottom: solid 1px $mayo;
+            border-top: solid 1px $color-mayo;
+            border-bottom: solid 1px $color-mayo;
           }
+
           .q {
-            color: $lightMayo;
+            color: $light-mayo;
           }
         }
       }
@@ -96,24 +110,28 @@
     .top {
       .buttons {
         button {
-          color: $ketchup;
+          color: $color-ketchup;
+
           &:hover {
-            color: $lightKetchup;
+            color: $light-ketchup;
           }
         }
       }
     }
+
     .panel-l,
     .panel-r {
       .questions {
         .question {
-          color: $ketchup;
+          color: $color-ketchup;
+
           .g-q-r {
-            border-top: solid 1px $ketchup;
-            border-bottom: solid 1px $ketchup;
+            border-top: solid 1px $color-ketchup;
+            border-bottom: solid 1px $color-ketchup;
           }
+
           .q {
-            color: $lightKetchup;
+            color: $light-ketchup;
           }
         }
       }

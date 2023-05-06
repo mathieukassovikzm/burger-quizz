@@ -12,7 +12,11 @@ export const selPoivre: IQuestionsSelPoivre = {
       question: "Je m'appel Antoine et j'aime ploter...",
       category: Category,
       reponseProp: {
-        propositions: [Choix1, Choix2, Choix3],
+        propositions: [
+          { letter: 'A', txt: Choix1 },
+          { letter: 'B', txt: Choix2 },
+          { letter: 'C', txt: Choix3 },
+        ],
         goodrep: 2,
       },
     },
@@ -20,7 +24,11 @@ export const selPoivre: IQuestionsSelPoivre = {
       question: 'Je suis blanc et je pointe souvent...',
       category: Category,
       reponseProp: {
-        propositions: [Choix1, Choix2, Choix3],
+        propositions: [
+          { letter: 'A', txt: Choix1 },
+          { letter: 'B', txt: Choix2 },
+          { letter: 'C', txt: Choix3 },
+        ],
         goodrep: 2,
       },
     },
@@ -28,7 +36,11 @@ export const selPoivre: IQuestionsSelPoivre = {
       question: 'Je suis alcoolisé en ce moment',
       category: Category,
       reponseProp: {
-        propositions: [Choix1, Choix2, Choix3],
+        propositions: [
+          { letter: 'A', txt: Choix1 },
+          { letter: 'B', txt: Choix2 },
+          { letter: 'C', txt: Choix3 },
+        ],
         goodrep: 2,
       },
     },
