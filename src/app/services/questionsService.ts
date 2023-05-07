@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import {
-  IQuestion,
   IQuestionsAddition,
   IQuestionsBurger2laMort,
+  IQuestionsDessert,
   IQuestionsMenu,
   IQuestionsNuggets,
   IQuestionsSelPoivre,
 } from '../models/questions';
-import { nuggets } from './data/QuizAnnifLolaMumu/Nuggets';
-import { menu } from './data/QuizAnnifLolaMumu/Menu';
-import { selPoivre } from './data/QuizAnnifLolaMumu/SelPoivre';
-import { addition } from './data/QuizAnnifLolaMumu/Addition';
+import {
+  addition,
+  dessert,
+  menu,
+  nuggets,
+  selPoivre,
+} from './data/QuizAnnifLolaMumu/index';
 
 @Injectable({
   providedIn: 'root',
@@ -28,6 +31,10 @@ export class QuestionsService {
 
   getQuestionsMenu(): IQuestionsMenu {
     return menu;
+  }
+
+  getQuestionsDessert(): IQuestionsDessert {
+    return dessert;
   }
 
   getQuestionsAddition(): IQuestionsAddition {

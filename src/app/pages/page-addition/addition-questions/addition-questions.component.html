@@ -1,3 +1,26 @@
-<p>
-  addition-questions works!
-</p>
+<div class="main-container">
+  <app-scores class="scores" [team]="ketchup"></app-scores>
+  <div class="questions">
+    <div class="container-que">
+      <h1 class="theme-addition">{{additionTheme}}</h1>
+      <h2>{{question?.question}}</h2>
+    </div>
+    <div class="container-rep">
+      <ul class="reponses">
+        <li class="rep" *ngIf="showAnswer">
+          <p>{{question?.reponse}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="buttons">
+      <button type="button" name="button" (click)="showReponse()">
+        Reponse
+      </button>
+      <button type="button" name="button" (click)="nextQuestion()">
+        Next
+      </button>
+    </div>
+
+  </div>
+  <app-scores class="scores" [team]="mayo"></app-scores>
+</div>

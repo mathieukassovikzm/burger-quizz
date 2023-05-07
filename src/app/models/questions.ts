@@ -28,25 +28,56 @@ export interface IReponse {
 export interface IQuestion {
   question: string;
   category?: CategoriesEnum;
-  team?: TeamEnum;
+}
+
+export interface IQuestionNuggets extends IQuestion {
+  team?: TeamEnum | undefined;
   reponseProp?: IReponseProp;
-  reponse?: IReponse;
 }
 
 export interface IQuestionsNuggets {
-  questions: IQuestion[];
+  questions: IQuestionNuggets[];
+}
+
+export interface IQuestionSelPoivre extends IQuestion {
+  reponseProp?: IReponseProp;
 }
 
 export interface IQuestionsSelPoivre {
-  questions: IQuestion[];
+  questions: IQuestionSelPoivre[];
+}
+
+export interface IQuestionMenu extends IQuestion {
+  team?: TeamEnum;
+  menu: string;
+  reponse?: string;
 }
 
 export interface IQuestionsMenu {
-  questions: IQuestion[];
+  questions: IQuestionMenu[];
+}
+
+export interface IGanacheDessert {
+  name: string;
+  imgUrl: string;
+}
+
+export interface IQuestionDessert extends IQuestion {
+  imgUrl: string;
+  team?: TeamEnum | undefined;
+  reponse?: IGanacheDessert[];
+}
+
+export interface IQuestionsDessert {
+  questions: IQuestionDessert[];
+}
+
+export interface IQuestionAddition extends IQuestion {
+  reponse?: string;
 }
 
 export interface IQuestionsAddition {
-  questions: IQuestion[];
+  questions: IQuestionAddition[];
 }
 
 export interface IQuestionsBurger2laMort {

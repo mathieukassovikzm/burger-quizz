@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import {
-  IQuestion,
+  IQuestionNuggets,
   IQuestionsNuggets,
   TeamEnum,
 } from 'src/app/models/questions';
@@ -18,7 +18,7 @@ export class NuggetsQuestionsComponent implements OnInit, OnDestroy {
   public mayo = TeamEnum.MAYO;
   public nuggetsQuestion: IQuestionsNuggets;
   public questionNumber: number = 0;
-  public question: IQuestion | undefined;
+  public question: IQuestionNuggets | undefined;
   public showAnswer = false;
   public subscription = new Subscription();
 

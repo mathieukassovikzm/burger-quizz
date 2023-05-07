@@ -1,15 +1,74 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import {
+  IQuestionDessert,
+  IQuestionsDessert,
+  TeamEnum,
+} from 'src/app/models/questions';
+import { LstPagesMap, Pages } from 'src/app/models/routes';
+import { QuestionsService } from 'src/app/services/questionsService';
 
 @Component({
   selector: 'app-dessert-questions',
   templateUrl: './dessert-questions.component.html',
-  styleUrls: ['./dessert-questions.component.css']
 })
-export class DessertQuestionsComponent implements OnInit {
+export class DessertQuestionsComponent implements OnInit, OnDestroy {
+  public ketchup = TeamEnum.KETCHUP;
+  public mayo = TeamEnum.MAYO;
+  public dessertQuestion: IQuestionsDessert;
+  public questionNumber: number = 0;
+  public question: IQuestionDessert | undefined;
+  public showAnswer = false;
+  public subscription = new Subscription();
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+    private router: Router,
+    private activeRoute: ActivatedRoute,
+    private questionsService: QuestionsService
+  ) {
+    this.dessertQuestion = this.questionsService.getQuestionsDessert();
   }
 
+  ngOnInit() {
+    const routing$ = this.activeRoute.params.subscribe((routeParams) => {
+      this.loadQuestion(<number>routeParams['id']);
+    });
+    this.subscription.add(routing$);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+  loadQuestion(id: number) {
+    this.questionNumber = id;
+    this.question =
+      this.dessertQuestion.questions.length > this.questionNumber
+        ? this.dessertQuestion.questions.at(this.questionNumber)
+        : undefined;
+  }
+
+  showReponse() {
+    this.showAnswer = true;
+  }
+
+  nextQuestion() {
+    this.questionNumber += 1;
+    // Si il reste des questions nuggets on continue les questions,
+    if (this.questionNumber < this.dessertQuestion.questions.length)
+      this.router.navigate([
+        `${LstPagesMap.get(Pages.DESSERT)?.route}/${
+          LstPagesMap.get(Pages.QUESTIONS)?.route
+        }`,
+        this.questionNumber,
+      ]);
+    // sinon on contiue le jeu
+    else
+      this.router.navigate([
+        `${LstPagesMap.get(Pages.ADDITION)?.route}/${
+          LstPagesMap.get(Pages.VIDEO)?.route
+        }`,
+      ]);
+  }
 }

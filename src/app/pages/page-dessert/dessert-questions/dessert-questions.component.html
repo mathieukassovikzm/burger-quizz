@@ -1,3 +1,31 @@
-<p>
-  dessert-questions works!
-</p>
+<div class="main-container">
+  <app-scores class="scores" [team]="ketchup"></app-scores>
+  <div class="questions" [class]="question!.team">
+    <div class="container-que">
+      <h2>{{question!.question}}</h2>
+    </div>
+    <div class="container-rep dessert">
+      <div class="ganache">
+        <img [src]="this.question?.imgUrl" />
+      </div>
+      <div class="reponses">
+        <div class="rep" *ngIf="showAnswer">
+          <div class="rep-with-photo" *ngFor="let item of question?.reponse">
+            <p>{{item.name}}</p>
+            <img [src]="item.imgUrl" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="button" name="button" (click)="showReponse()">
+        Reponse
+      </button>
+      <button type="button" name="button" (click)="nextQuestion()">
+        Next
+      </button>
+    </div>
+
+  </div>
+  <app-scores class="scores" [team]="mayo"></app-scores>
+</div>

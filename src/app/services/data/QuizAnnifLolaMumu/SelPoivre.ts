@@ -18,7 +18,6 @@ export const selPoivre: IQuestionsSelPoivre = {
     {
       question: "Je m'appel Antoine et j'aime ploter...",
       category: Category,
-      team: TeamEnum.KETCHUP,
       reponseProp: {
         propositions: propositionsKetchup,
         goodrep: 2,
@@ -27,7 +26,6 @@ export const selPoivre: IQuestionsSelPoivre = {
     {
       question: 'Je suis blanc et je pointe souvent...',
       category: Category,
-      team: TeamEnum.KETCHUP,
       reponseProp: {
         propositions: propositionsKetchup,
         goodrep: 1,
@@ -36,7 +34,6 @@ export const selPoivre: IQuestionsSelPoivre = {
     {
       question: 'Je suis alcoolisé en ce moment',
       category: Category,
-      team: TeamEnum.KETCHUP,
       reponseProp: {
         propositions: propositionsKetchup,
         goodrep: 0,

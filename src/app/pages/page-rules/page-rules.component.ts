@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { IRules } from 'src/app/models/rules';
+import { additionTheme } from 'src/app/services/data/QuizAnnifLolaMumu/Addition';
+import {
+  MenuKetchup,
+  MenuMayo,
+} from 'src/app/services/data/QuizAnnifLolaMumu/Menu';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
@@ -35,7 +40,14 @@ export class PageRulesComponent implements OnInit {
   private ruleMenu: IRules = {
     currentPage: Pages.MENU,
     game: 'Menu',
-    rules: this.uiService.menuRules,
+    rules: [
+      '4 questions thématiques',
+      'Aucune proposition',
+      '2 menus:',
+      MenuKetchup,
+      MenuMayo,
+      '1 miam par bonne réponse',
+    ],
   };
 
   private ruleDessert: IRules = {
@@ -52,7 +64,12 @@ export class PageRulesComponent implements OnInit {
   private ruleAddition: IRules = {
     currentPage: Pages.ADDITION,
     game: "L'addition",
-    rules: this.uiService.additionRules,
+    rules: [
+      'Quiz de rapidité',
+      'Catégorie :',
+      additionTheme,
+      '1 miam par bonne réponse',
+    ],
   };
 
   public rule = this.ruleNuggets;

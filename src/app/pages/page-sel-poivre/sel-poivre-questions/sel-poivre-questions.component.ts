@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
-  TeamEnum,
+  IQuestionSelPoivre,
   IQuestionsNuggets,
-  IQuestion,
+  TeamEnum,
 } from 'src/app/models/questions';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { QuestionsService } from 'src/app/services/questionsService';
@@ -17,7 +17,7 @@ export class SelPoivreQuestionsComponent implements OnInit {
   public mayo = TeamEnum.MAYO;
   public selPoivreQuestion: IQuestionsNuggets;
   public questionNumber = 0;
-  public question: IQuestion | undefined;
+  public question: IQuestionSelPoivre | undefined;
   public showAnswer = false;
 
   constructor(
