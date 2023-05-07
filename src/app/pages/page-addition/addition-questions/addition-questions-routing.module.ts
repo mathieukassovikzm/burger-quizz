@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NuggetsVideoComponent } from './nuggets-video.component';
+import { AdditionQuestionsComponent } from './addition-questions.component';
 
 const routes: Routes = [
   {
@@ -8,7 +8,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: NuggetsVideoComponent,
+        component: AdditionQuestionsComponent,
       },
     ],
   },
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class NuggetsVideoRoutingModule {}
+export class AdditionQuestionsRoutingModule {}

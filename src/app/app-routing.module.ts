@@ -47,6 +47,34 @@ const routes: Routes = [
         (m) => m.PageNuggetsModule
       ),
   },
+  {
+    path: LstPagesMap.get(Pages.SELPOIVRE)?.route,
+    loadChildren: () =>
+      import('./pages/page-sel-poivre/page-sel-poivre.module').then(
+        (m) => m.PageSelPoivreModule
+      ),
+  },
+  {
+    path: LstPagesMap.get(Pages.MENU)?.route,
+    loadChildren: () =>
+      import('./pages/page-menu/page-menu.module').then(
+        (m) => m.PageMenuModule
+      ),
+  },
+  {
+    path: LstPagesMap.get(Pages.DESSERT)?.route,
+    loadChildren: () =>
+      import('./pages/page-dessert/page-dessert.module').then(
+        (m) => m.PageDessertModule
+      ),
+  },
+  {
+    path: LstPagesMap.get(Pages.ADDITION)?.route,
+    loadChildren: () =>
+      import('./pages/page-addition/page-addition.module').then(
+        (m) => m.PageAdditionModule
+      ),
+  },
 ];
 
 @NgModule({

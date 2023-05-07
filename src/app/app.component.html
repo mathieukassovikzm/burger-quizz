@@ -2,10 +2,10 @@
   <img src="./assets/Burger-Quiz-logo.png" alt />
   <p>
     Annif
-    <!-- <a @click="goToBurgerMortKetchup" class="ketchup">Mamel</a> &
-    <a @click="goToBurgerMortMayo" class="mayo">BenJ</a> -->
+    <a (click)="goToBurgerMortKetchup()" class="ketchup">{{playerKetchup}}</a> &
+    <a (click)="goToBurgerMortMayo()" class="mayo">{{playerMayo}}</a>
   </p>
 </div>
 <div class="body">
-  <router-outlet #outlet="outlet"></router-outlet>
+  <router-outlet></router-outlet>
 </div>

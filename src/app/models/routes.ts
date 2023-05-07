@@ -11,26 +11,15 @@ export enum Pages {
   EQUIPES,
   FIN,
 
-  NUGGETS,
   RULES,
   VIDEO,
   QUESTIONS,
 
-  SELPOIVRERULES,
-  SELPOIVREVIDEO,
-  SELPOIVREQUESTIONS,
-
-  MENURULES,
-  MENUVIDEO,
-  MENUQUESTIONS,
-
-  DESSERTRULES,
-  DESSERTVIDEO,
-  DESSERTQUESTIONS,
-
-  ADDITIONRULES,
-  ADDITIONVIDEO,
-  ADDITIONQUESTIONS,
+  NUGGETS,
+  SELPOIVRE,
+  MENU,
+  DESSERT,
+  ADDITION,
 
   BURGERDELAMORTRULES,
   BURGERDELAMORTVIDEO,
@@ -44,26 +33,15 @@ export const LstPagesMap = new Map<Pages, IPageInfos>([
   [Pages.EQUIPES, <IPageInfos>{ route: 'equipes' }],
   [Pages.FIN, <IPageInfos>{ route: 'fin' }],
 
-  [Pages.NUGGETS, <IPageInfos>{ route: 'nuggets' }],
   [Pages.RULES, <IPageInfos>{ route: 'rules' }],
   [Pages.VIDEO, <IPageInfos>{ route: 'video' }],
   [Pages.QUESTIONS, <IPageInfos>{ route: 'question' }],
 
-  [Pages.SELPOIVRERULES, <IPageInfos>{ route: 'selpoivre-rules' }],
-  [Pages.SELPOIVREVIDEO, <IPageInfos>{ route: 'selpoivre-video' }],
-  [Pages.SELPOIVREQUESTIONS, <IPageInfos>{ route: 'selpoivre-question' }],
-
-  [Pages.MENURULES, <IPageInfos>{ route: 'menu-rules' }],
-  [Pages.MENUVIDEO, <IPageInfos>{ route: 'menu-video' }],
-  [Pages.MENUQUESTIONS, <IPageInfos>{ route: 'menu-question' }],
-
-  [Pages.DESSERTRULES, <IPageInfos>{ route: 'dessert-rules' }],
-  [Pages.DESSERTVIDEO, <IPageInfos>{ route: 'dessert-video' }],
-  [Pages.DESSERTQUESTIONS, <IPageInfos>{ route: 'dessert-question' }],
-
-  [Pages.ADDITIONRULES, <IPageInfos>{ route: 'addition-rules' }],
-  [Pages.ADDITIONVIDEO, <IPageInfos>{ route: 'addition-video' }],
-  [Pages.ADDITIONQUESTIONS, <IPageInfos>{ route: 'addition-question' }],
+  [Pages.NUGGETS, <IPageInfos>{ route: 'nuggets' }],
+  [Pages.SELPOIVRE, <IPageInfos>{ route: 'selpoivre' }],
+  [Pages.MENU, <IPageInfos>{ route: 'menu' }],
+  [Pages.DESSERT, <IPageInfos>{ route: 'dessert' }],
+  [Pages.ADDITION, <IPageInfos>{ route: 'addition' }],
 
   [Pages.BURGERDELAMORTRULES, <IPageInfos>{ route: 'burger2lamort-rules' }],
   [Pages.BURGERDELAMORTVIDEO, <IPageInfos>{ route: 'burger2lamort-video' }],

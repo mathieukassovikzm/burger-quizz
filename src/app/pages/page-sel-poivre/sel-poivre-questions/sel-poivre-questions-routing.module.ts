@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NuggetsRulesComponent } from './nuggets-rules.component';
+import { SelPoivreQuestionsComponent } from './sel-poivre-questions.component';
 
 const routes: Routes = [
   {
@@ -8,7 +8,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: NuggetsRulesComponent,
+        component: SelPoivreQuestionsComponent,
       },
     ],
   },
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class NuggetsRulesRoutingModule {}
+export class SelPoivreQuestionsRoutingModule {}

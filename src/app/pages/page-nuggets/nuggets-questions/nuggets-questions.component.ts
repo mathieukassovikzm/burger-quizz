@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import {
   IQuestion,
   IQuestionsNuggets,
@@ -12,13 +13,14 @@ import { QuestionsService } from 'src/app/services/questionsService';
   selector: 'app-nuggets-questions',
   templateUrl: './nuggets-questions.component.html',
 })
-export class NuggetsQuestionsComponent implements OnInit {
+export class NuggetsQuestionsComponent implements OnInit, OnDestroy {
   public ketchup = TeamEnum.KETCHUP;
   public mayo = TeamEnum.MAYO;
   public nuggetsQuestion: IQuestionsNuggets;
-  public questionNumber = 0;
+  public questionNumber: number = 0;
   public question: IQuestion | undefined;
   public showAnswer = false;
+  public subscription = new Subscription();
 
   constructor(
     private router: Router,
@@ -29,9 +31,14 @@ export class NuggetsQuestionsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activeRoute.params.subscribe((routeParams) => {
-      this.loadQuestion(routeParams['id']);
+    const routing$ = this.activeRoute.params.subscribe((routeParams) => {
+      this.loadQuestion(<number>routeParams['id']);
     });
+    this.subscription.add(routing$);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   loadQuestion(id: number) {
@@ -51,15 +58,21 @@ export class NuggetsQuestionsComponent implements OnInit {
   }
 
   nextQuestion() {
+    this.questionNumber += 1;
     // Si il reste des questions nuggets on continue les questions,
-    if (this.questionNumber + 1 < this.nuggetsQuestion.questions.length)
+    if (this.questionNumber < this.nuggetsQuestion.questions.length)
       this.router.navigate([
         `${LstPagesMap.get(Pages.NUGGETS)?.route}/${
           LstPagesMap.get(Pages.QUESTIONS)?.route
         }`,
-        this.questionNumber + 1,
+        this.questionNumber,
       ]);
     // sinon on contiue le jeu
-    else this.router.navigate([`${LstPagesMap.get(Pages.HOME)?.route}`]);
+    else
+      this.router.navigate([
+        `${LstPagesMap.get(Pages.SELPOIVRE)?.route}/${
+          LstPagesMap.get(Pages.VIDEO)?.route
+        }`,
+      ]);
   }
 }

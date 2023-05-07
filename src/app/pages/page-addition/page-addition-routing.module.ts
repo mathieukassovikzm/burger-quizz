@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageNuggetsComponent } from './page-nuggets.component';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
+import { PageAdditionComponent } from './page-addition.component';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: PageNuggetsComponent,
+        component: PageAdditionComponent,
       },
       {
         path: LstPagesMap.get(Pages.RULES)?.route,
@@ -28,8 +28,8 @@ const routes: Routes = [
       {
         path: `${LstPagesMap.get(Pages.QUESTIONS)?.route}/:id`,
         loadChildren: () =>
-          import('./nuggets-questions/nuggets-questions.module').then(
-            (m) => m.NuggetsQuestionsModule
+          import('./addition-questions/addition-questions.module').then(
+            (m) => m.AdditionQuestionsModule
           ),
       },
     ],
@@ -40,4 +40,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PageNuggetsRoutingModule {}
+export class PageSelPoivreRoutingModule {}

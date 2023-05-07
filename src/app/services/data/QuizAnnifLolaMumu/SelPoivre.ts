@@ -1,47 +1,45 @@
-import { CategoriesEnum, IQuestionsSelPoivre } from 'src/app/models/questions';
+import {
+  CategoriesEnum,
+  IProposition,
+  IQuestionsSelPoivre,
+  TeamEnum,
+} from 'src/app/models/questions';
 
 const Category = CategoriesEnum.SELPOIVRE;
 
-const Choix1 = 'Lola';
-const Choix2 = 'Lolo';
-const Choix3 = 'Les deux';
+const propositionsKetchup = <IProposition[]>[
+  { letter: 'A', txt: 'Lola' },
+  { letter: 'B', txt: 'Lolo' },
+  { letter: 'C', txt: 'Les deux' },
+];
 
 export const selPoivre: IQuestionsSelPoivre = {
   questions: [
     {
       question: "Je m'appel Antoine et j'aime ploter...",
       category: Category,
+      team: TeamEnum.KETCHUP,
       reponseProp: {
-        propositions: [
-          { letter: 'A', txt: Choix1 },
-          { letter: 'B', txt: Choix2 },
-          { letter: 'C', txt: Choix3 },
-        ],
+        propositions: propositionsKetchup,
         goodrep: 2,
       },
     },
     {
       question: 'Je suis blanc et je pointe souvent...',
       category: Category,
+      team: TeamEnum.KETCHUP,
       reponseProp: {
-        propositions: [
-          { letter: 'A', txt: Choix1 },
-          { letter: 'B', txt: Choix2 },
-          { letter: 'C', txt: Choix3 },
-        ],
-        goodrep: 2,
+        propositions: propositionsKetchup,
+        goodrep: 1,
       },
     },
     {
       question: 'Je suis alcoolisé en ce moment',
       category: Category,
+      team: TeamEnum.KETCHUP,
       reponseProp: {
-        propositions: [
-          { letter: 'A', txt: Choix1 },
-          { letter: 'B', txt: Choix2 },
-          { letter: 'C', txt: Choix3 },
-        ],
-        goodrep: 2,
+        propositions: propositionsKetchup,
+        goodrep: 0,
       },
     },
   ],

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageNuggetsComponent } from './page-nuggets.component';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
+import { PageDessertComponent } from './page-dessert.component';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: PageNuggetsComponent,
+        component: PageDessertComponent,
       },
       {
         path: LstPagesMap.get(Pages.RULES)?.route,
@@ -19,17 +19,10 @@ const routes: Routes = [
           ),
       },
       {
-        path: LstPagesMap.get(Pages.VIDEO)?.route,
-        loadChildren: () =>
-          import('../page-video/page-video.module').then(
-            (m) => m.PageVideoModule
-          ),
-      },
-      {
         path: `${LstPagesMap.get(Pages.QUESTIONS)?.route}/:id`,
         loadChildren: () =>
-          import('./nuggets-questions/nuggets-questions.module').then(
-            (m) => m.NuggetsQuestionsModule
+          import('./dessert-questions/dessert-questions.module').then(
+            (m) => m.DessertQuestionsModule
           ),
       },
     ],
@@ -40,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PageNuggetsRoutingModule {}
+export class PageSelPoivreRoutingModule {}
