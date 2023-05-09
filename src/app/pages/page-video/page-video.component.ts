@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { IVideo } from 'src/app/models/video';
+import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
   selector: 'app-page-video',
@@ -36,11 +37,34 @@ export class PageVideoComponent implements OnInit {
     videoUrl: '/assets/videos/Addition.mp4',
   };
 
+  public videoBurger2laMort1: IVideo = {
+    redirection: `${LstPagesMap.get(Pages.BURGERDELAMORT)?.route}/${
+      LstPagesMap.get(Pages.RULES)?.route
+    }`,
+    videoUrl: '/assets/videos/BurgerDeLaMort1.mp4',
+  };
+
+  public videoBurger2laMort2: IVideo = {
+    redirection: `${LstPagesMap.get(Pages.BURGERDELAMORT)?.route}/${
+      LstPagesMap.get(Pages.RULES)?.route
+    }`,
+    videoUrl: '/assets/videos/BurgerDeLaMort2.mp4',
+  };
+
   public video = this.videoNuggets;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private scoresService: ScoresService) {}
 
   ngOnInit() {
+    // On récupère le looser qui joue le Burger de la mort en premier
+    const winner = this.scoresService.getWinner();
+    this.videoBurger2laMort2 = {
+      ...this.videoBurger2laMort2,
+      redirection: `${LstPagesMap.get(Pages.BURGERDELAMORT)?.route}/${
+        LstPagesMap.get(Pages.QUESTIONS)?.route
+      }/${winner}`,
+    };
+
     const currentRoute = this.router.url.slice(1).replace(`/video`, '');
     switch (currentRoute) {
       case LstPagesMap.get(Pages.ADDITION)!.route:
@@ -54,6 +78,12 @@ export class PageVideoComponent implements OnInit {
         break;
       case LstPagesMap.get(Pages.SELPOIVRE)!.route:
         this.video = this.videoSelPoivre;
+        break;
+      case `${LstPagesMap.get(Pages.BURGERDELAMORT)!.route}1`:
+        this.video = this.videoBurger2laMort1;
+        break;
+      case `${LstPagesMap.get(Pages.BURGERDELAMORT)!.route}2`:
+        this.video = this.videoBurger2laMort2;
         break;
       default:
         break;

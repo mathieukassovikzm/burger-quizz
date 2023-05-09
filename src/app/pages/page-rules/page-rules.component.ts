@@ -7,6 +7,7 @@ import {
   MenuKetchup,
   MenuMayo,
 } from 'src/app/services/data/QuizAnnifLolaMumu/Menu';
+import { ScoresService } from 'src/app/services/scoresService';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
@@ -72,12 +73,25 @@ export class PageRulesComponent implements OnInit {
     ],
   };
 
+  private ruleBurger2laMort: IRules = {
+    currentPage: Pages.BURGERDELAMORT,
+    game: 'Burger de la mort',
+    rules: [
+      '10 questions à la suite',
+      'A la fin des 10 questions',
+      "Donnez les 10 réponses dans l'ordre",
+      'Questions très simples',
+      'Il ne faut pas souffler',
+    ],
+  };
+
   public rule = this.ruleNuggets;
-  constructor(private router: Router, private uiService: UiService) {}
+  public currentRoute = '';
+  constructor(private router: Router, private scoresService: ScoresService) {}
 
   ngOnInit() {
-    const currentRoute = this.router.url.slice(1).replace(`/rules`, '');
-    switch (currentRoute) {
+    this.currentRoute = this.router.url.slice(1).replace(`/rules`, '');
+    switch (this.currentRoute) {
       case LstPagesMap.get(Pages.ADDITION)!.route:
         this.rule = this.ruleAddition;
         break;
@@ -93,17 +107,25 @@ export class PageRulesComponent implements OnInit {
       case LstPagesMap.get(Pages.DESSERT)!.route:
         this.rule = this.ruleDessert;
         break;
+      case LstPagesMap.get(Pages.BURGERDELAMORT)!.route:
+        this.rule = this.ruleBurger2laMort;
+        break;
       default:
         break;
     }
   }
 
   goToNextPage() {
+    // On décide du vainqueur !
+    this.scoresService.setWinner();
+
+    // On récupère le looser qui joue le Burger de la mort en premier
+    const looser = this.scoresService.getLooser();
     this.router.navigate([
       `${LstPagesMap.get(this.rule.currentPage)?.route}/${
         LstPagesMap.get(Pages.QUESTIONS)?.route
       }`,
-      0,
+      looser,
     ]);
   }
 

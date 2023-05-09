@@ -1,0 +1,38 @@
+<div [class]="getClassB2lm()">
+  <div class="top">
+    <div class="title">
+      <h2>Le Burger de la</h2>
+      <h1 [class]="teamPlaying">Mort</h1>
+    </div>
+    <div class="buttons">
+      <button type="button" name="button" (click)="showReponse()">Reponse</button>
+      <button type="button" name="button" (click)="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <div class="questions" *ngIf="showAnswer">
+    <div class="panel-l">
+      <div class="question" *ngFor="let item of currentQuestions; let i = index ">
+        <div class=" divif" *ngIf="i<5">
+          <h2>{{i+1}}</h2>
+          <div class="g-q-r">
+            <p class="q">{{item.question}}</p>
+            <p class="r">Réponse: {{item.reponse}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-r">
+      <div class="question" *ngFor="let item of currentQuestions; let i = index ">
+        <div class="divif" *ngIf="5<=i">
+          <h2>{{i+1}}</h2>
+          <div class="g-q-r">
+            <p class="q">{{item.question}}</p>
+            <p class="r">Réponse: {{item.reponse}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

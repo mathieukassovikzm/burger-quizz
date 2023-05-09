@@ -75,6 +75,18 @@ const routes: Routes = [
         (m) => m.PageAdditionModule
       ),
   },
+  {
+    path: LstPagesMap.get(Pages.BURGERDELAMORT)?.route,
+    loadChildren: () =>
+      import(
+        './pages/page-burger-de-la-mort/page-burger-de-la-mort.module'
+      ).then((m) => m.PageBurgerDeLaMortModule),
+  },
+  {
+    path: LstPagesMap.get(Pages.FIN)?.route,
+    loadChildren: () =>
+      import('./pages/page-fin/page-fin.module').then((m) => m.PageFinModule),
+  },
 ];
 
 @NgModule({

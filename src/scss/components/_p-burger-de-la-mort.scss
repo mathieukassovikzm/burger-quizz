@@ -38,41 +38,40 @@
     }
   }
 
-  .container-flex {
+  .questions {
     display: flex;
+    justify-content: center;
 
-    .panel-l,
-    .panel-r {
+    &.panel-l,
+    &.panel-r {
       width: 50%;
+    }
 
-      .questions {
-        .question {
-          .divif {
-            width: 100%;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-          }
+    .question {
+      .divif {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
 
-          .g-q-r {
-            width: 90%;
-            padding: 5px 0;
-          }
+      .g-q-r {
+        width: 90%;
+        padding: 5px 0;
+      }
 
-          h2 {
-            font-family: fontBurgerQuizzTitle;
-            font-weight: inherit;
-            font-size: 3em;
-            margin-right: 10px;
-          }
+      h2 {
+        font-family: fontBurgerQuizzTitle;
+        font-weight: inherit;
+        font-size: 3em;
+        margin-right: 10px;
+      }
 
-          p {
-            font-size: 1.8em;
-          }
-        }
+      p {
+        font-size: 1.8em;
       }
     }
   }
+
 
   &.mayo {
     .top {
@@ -87,20 +86,17 @@
       }
     }
 
-    .panel-l,
-    .panel-r {
-      .questions {
-        .question {
-          color: $color-mayo;
+    .questions {
+      .question {
+        color: $color-mayo;
 
-          .g-q-r {
-            border-top: solid 1px $color-mayo;
-            border-bottom: solid 1px $color-mayo;
-          }
+        .g-q-r {
+          border-top: solid 1px $color-mayo;
+          border-bottom: solid 1px $color-mayo;
+        }
 
-          .q {
-            color: $light-mayo;
-          }
+        .q {
+          color: $light-mayo;
         }
       }
     }
@@ -119,20 +115,17 @@
       }
     }
 
-    .panel-l,
-    .panel-r {
-      .questions {
-        .question {
-          color: $color-ketchup;
+    .questions {
+      .question {
+        color: $color-ketchup;
 
-          .g-q-r {
-            border-top: solid 1px $color-ketchup;
-            border-bottom: solid 1px $color-ketchup;
-          }
+        .g-q-r {
+          border-top: solid 1px $color-ketchup;
+          border-bottom: solid 1px $color-ketchup;
+        }
 
-          .q {
-            color: $light-ketchup;
-          }
+        .q {
+          color: $light-ketchup;
         }
       }
     }

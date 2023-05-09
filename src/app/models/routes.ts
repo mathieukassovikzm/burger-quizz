@@ -21,10 +21,7 @@ export enum Pages {
   DESSERT,
   ADDITION,
 
-  BURGERDELAMORTRULES,
-  BURGERDELAMORTVIDEO,
-  BURGERDELAMORTQUESTIONSK,
-  BURGERDELAMORTQUESTIONSM,
+  BURGERDELAMORT,
 }
 
 export const LstPagesMap = new Map<Pages, IPageInfos>([
@@ -43,14 +40,5 @@ export const LstPagesMap = new Map<Pages, IPageInfos>([
   [Pages.DESSERT, <IPageInfos>{ route: 'dessert' }],
   [Pages.ADDITION, <IPageInfos>{ route: 'addition' }],
 
-  [Pages.BURGERDELAMORTRULES, <IPageInfos>{ route: 'burger2lamort-rules' }],
-  [Pages.BURGERDELAMORTVIDEO, <IPageInfos>{ route: 'burger2lamort-video' }],
-  [
-    Pages.BURGERDELAMORTQUESTIONSK,
-    <IPageInfos>{ route: 'burger2lamort-question-ketchup' },
-  ],
-  [
-    Pages.BURGERDELAMORTQUESTIONSM,
-    <IPageInfos>{ route: 'burger2lamort-question-mayo' },
-  ],
+  [Pages.BURGERDELAMORT, <IPageInfos>{ route: 'burger2lamort' }],
 ]);

@@ -9,6 +9,7 @@ import {
 } from '../models/questions';
 import {
   addition,
+  burger2laMort,
   dessert,
   menu,
   nuggets,
@@ -42,6 +43,6 @@ export class QuestionsService {
   }
 
   getQuestionsBurger2laMort(): IQuestionsBurger2laMort {
-    return nuggets;
+    return burger2laMort;
   }
 }

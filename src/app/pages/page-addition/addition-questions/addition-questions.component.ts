@@ -70,9 +70,9 @@ export class AdditionQuestionsComponent implements OnInit, OnDestroy {
     // sinon on contiue le jeu
     else
       this.router.navigate([
-        `${LstPagesMap.get(Pages.ADDITION)?.route}/${
+        `${LstPagesMap.get(Pages.BURGERDELAMORT)?.route}/${
           LstPagesMap.get(Pages.VIDEO)?.route
-        }`,
+        }1`,
       ]);
   }
 }

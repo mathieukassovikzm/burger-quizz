@@ -64,7 +64,7 @@ export interface IGanacheDessert {
 
 export interface IQuestionDessert extends IQuestion {
   imgUrl: string;
-  team?: TeamEnum | undefined;
+  team?: TeamEnum;
   reponse?: IGanacheDessert[];
 }
 
@@ -80,6 +80,11 @@ export interface IQuestionsAddition {
   questions: IQuestionAddition[];
 }
 
+export interface IQuestionBurger2laMort extends IQuestion {
+  team?: TeamEnum;
+  reponse?: string;
+}
+
 export interface IQuestionsBurger2laMort {
-  questions: IQuestion[];
+  questions: IQuestionBurger2laMort[];
 }
