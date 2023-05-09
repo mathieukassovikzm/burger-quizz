@@ -1,0 +1,20 @@
+@import "_variables";
+
+:host {
+  .container {
+    position: relative;
+    .btn-start {
+      position: relative;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      font-family: "fontBurgerQuizzTitle";
+      color: $segundary;
+      font-size: 5rem;
+      &:hover {
+        color: $txt-segundary;
+      }
+    }
+  }
+}

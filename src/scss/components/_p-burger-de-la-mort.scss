@@ -1,0 +1,133 @@
+.b2lm {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+
+  .top {
+    .title {
+      display: flex;
+      justify-content: center;
+
+      h1,
+      h2 {
+        font-family: fontBurgerQuizzTitle;
+        font-weight: inherit;
+        font-size: 5em;
+        margin-right: 10px;
+      }
+
+      h1 {
+        color: $color-ketchup;
+      }
+
+      h2 {
+        color: #6b9742;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+
+      button {
+        margin-top: 20px;
+        font-family: fontBurgerQuizzTitle;
+        font-size: 3rem;
+        color: $segundary;
+      }
+    }
+  }
+
+  .questions {
+    display: flex;
+    justify-content: center;
+
+    &.panel-l,
+    &.panel-r {
+      width: 50%;
+    }
+
+    .question {
+      .divif {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+
+      .g-q-r {
+        width: 90%;
+        padding: 5px 0;
+      }
+
+      h2 {
+        font-family: fontBurgerQuizzTitle;
+        font-weight: inherit;
+        font-size: 3em;
+        margin-right: 10px;
+      }
+
+      p {
+        font-size: 1.8em;
+      }
+    }
+  }
+
+
+  &.mayo {
+    .top {
+      .buttons {
+        button {
+          color: $color-mayo;
+
+          &:hover {
+            color: $light-mayo;
+          }
+        }
+      }
+    }
+
+    .questions {
+      .question {
+        color: $color-mayo;
+
+        .g-q-r {
+          border-top: solid 1px $color-mayo;
+          border-bottom: solid 1px $color-mayo;
+        }
+
+        .q {
+          color: $light-mayo;
+        }
+      }
+    }
+  }
+
+  &.ketchup {
+    .top {
+      .buttons {
+        button {
+          color: $color-ketchup;
+
+          &:hover {
+            color: $light-ketchup;
+          }
+        }
+      }
+    }
+
+    .questions {
+      .question {
+        color: $color-ketchup;
+
+        .g-q-r {
+          border-top: solid 1px $color-ketchup;
+          border-bottom: solid 1px $color-ketchup;
+        }
+
+        .q {
+          color: $light-ketchup;
+        }
+      }
+    }
+  }
+}

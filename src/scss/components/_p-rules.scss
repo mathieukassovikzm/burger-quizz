@@ -1,0 +1,40 @@
+.rules {
+  margin: auto;
+  color: $segundary;
+  text-align: center;
+  padding: 20px 0;
+
+  h1 {
+    font-family: fontBurgerQuizzTitle;
+    font-weight: inherit;
+    font-size: 7em;
+  }
+
+  h2 {
+    color: $txt-primary;
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 3em;
+
+    &.mayo {
+      color: $color-mayo;
+    }
+
+    &.ketchup {
+      color: $color-ketchup;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    font-family: fontBurgerQuizzTitle;
+    font-size: 4rem;
+    color: $segundary;
+
+    &:hover {
+      color: $txt-segundary;
+    }
+  }
+}

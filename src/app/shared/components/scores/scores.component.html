@@ -1,0 +1,9 @@
+<div class="scores">
+  <div [class]="getClassScore()">
+    <img [src]="getBkgImage()" alt="">
+    <div class="div-btn">
+      <button [class]="getClassBtnMinus()" (click)="teamMinusOne()">-1</button>
+      <button [class]="getClassBtnPlus()" (click)="teamPlusOne()">+1</button>
+    </div>
+  </div>
+</div>

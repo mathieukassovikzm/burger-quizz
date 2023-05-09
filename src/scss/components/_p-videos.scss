@@ -1,0 +1,13 @@
+$width-video: 75%;
+.video {
+  width: $width-video;
+  margin: auto (100% - $width-video)/2;
+}
+
+@media screen and (min-width: 1300px) {
+  $width-video: 50%;
+  .video {
+    width: $width-video;
+    margin: auto (100% - $width-video)/2;
+  }
+}

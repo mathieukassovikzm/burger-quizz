@@ -1,0 +1,163 @@
+@mixin questionsColors($teamColor, $teamLightColor) {
+  background-color: $teamColor;
+
+  .buttons {
+    button {
+      color: $teamLightColor;
+
+      &:hover {
+        color: $txt-dark;
+      }
+    }
+  }
+
+  .container-que {
+    color: $txt-dark;
+    background-color: $teamColor;
+  }
+
+  .container-rep {
+    background-color: $teamLightColor;
+
+    .reponses {
+      .rep.goodrep {
+        color: $teamColor;
+      }
+    }
+
+    .ganache,
+    .rep-with-photo {
+      img {
+        border: solid 4px $teamColor;
+      }
+    }
+  }
+}
+
+.questions {
+  position: relative;
+  color: $primary;
+  width: 100%;
+  min-height: 800px;
+
+  .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    button {
+      color: $txt-primary;
+      font-family: "fontBurgerQuizzTitle";
+      font-size: 4rem;
+
+      &:hover {
+        color: $segundary;
+      }
+    }
+  }
+
+  .container-que {
+    padding: 20px 20px;
+    color: $txt-dark;
+    background-color: $txt-primary;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: "fontBurgerQuizzTitle";
+      font-size: 3.5rem;
+      font-weight: inherit;
+
+      &.theme-addition {
+        font-size: 2rem;
+        color: $segundary;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: $base-size-xxl;
+    }
+  }
+
+  .container-rep {
+    position: relative;
+    min-height: 400px;
+    padding: 20px 0;
+    background-color: $txt-primary;
+
+    .reponses {
+      width: 90%;
+      margin: auto;
+
+      .rep {
+        display: flex;
+        align-items: center;
+
+        h3 {
+          font-family: "fontBurgerQuizzTitle";
+          font-size: 3.5rem;
+          font-weight: normal;
+          margin-right: 20px;
+        }
+
+        p {
+          position: relative;
+          top: -8px;
+          font-size: 2.2rem;
+        }
+
+        &.goodrep {
+          color: $segundary;
+        }
+      }
+
+      &.dessert {
+        .rep {
+          display: block;
+          padding: 10px 0;
+        }
+      }
+    }
+
+    &.dessert {
+      .ganache {
+        img {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          max-width: 80%;
+          height: auto;
+        }
+      }
+
+      .reponses {
+        .rep {
+          display: flex;
+          flex-direction: column;
+
+          .rep-with-photo {
+            margin-top: 50px;
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            img {
+              max-width: 80%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ketchup {
+    @include questionsColors($color-ketchup, $light-ketchup)
+  }
+
+  &.mayo {
+    @include questionsColors($color-mayo, $light-mayo)
+  }
+}
