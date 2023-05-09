@@ -32,7 +32,8 @@ export class MenuQuestionsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     const routing$ = this.activeRoute.params.subscribe((routeParams) => {
-      this.loadQuestion(<number>routeParams['id']);
+      this.showAnswer = false;
+      this.loadQuestion(Number(routeParams['id']));
     });
     this.subscription.add(routing$);
   }
