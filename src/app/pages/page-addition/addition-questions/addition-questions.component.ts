@@ -11,6 +11,7 @@ import {
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { additionTheme } from 'src/app/services/data/QuizAnnifLolaMumu/Addition';
 import { QuestionsService } from 'src/app/services/questionsService';
+import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
   selector: 'app-addition-questions',
@@ -29,7 +30,8 @@ export class AdditionQuestionsComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private questionsService: QuestionsService
+    private questionsService: QuestionsService,
+    private scoresService: ScoresService
   ) {
     this.addtionQuestion = this.questionsService.getQuestionsAddition();
   }
@@ -68,11 +70,14 @@ export class AdditionQuestionsComponent implements OnInit, OnDestroy {
         this.questionNumber,
       ]);
     // sinon on contiue le jeu
-    else
+    else {
+      // On décide du vainqueur !
+      this.scoresService.setWinner();
       this.router.navigate([
         `${LstPagesMap.get(Pages.BURGERDELAMORT)?.route}/${
           LstPagesMap.get(Pages.VIDEO)?.route
         }1`,
       ]);
+    }
   }
 }

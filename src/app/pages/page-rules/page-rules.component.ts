@@ -87,6 +87,8 @@ export class PageRulesComponent implements OnInit {
 
   public rule = this.ruleNuggets;
   public currentRoute = '';
+  private isBurgerDeLaMort = false;
+
   constructor(private router: Router, private scoresService: ScoresService) {}
 
   ngOnInit() {
@@ -109,6 +111,7 @@ export class PageRulesComponent implements OnInit {
         break;
       case LstPagesMap.get(Pages.BURGERDELAMORT)!.route:
         this.rule = this.ruleBurger2laMort;
+        this.isBurgerDeLaMort = true;
         break;
       default:
         break;
@@ -116,17 +119,23 @@ export class PageRulesComponent implements OnInit {
   }
 
   goToNextPage() {
-    // On décide du vainqueur !
-    this.scoresService.setWinner();
-
-    // On récupère le looser qui joue le Burger de la mort en premier
-    const looser = this.scoresService.getLooser();
-    this.router.navigate([
-      `${LstPagesMap.get(this.rule.currentPage)?.route}/${
-        LstPagesMap.get(Pages.QUESTIONS)?.route
-      }`,
-      looser,
-    ]);
+    if (this.isBurgerDeLaMort) {
+      // On récupère le looser qui joue le Burger de la mort en premier
+      const looser = this.scoresService.getLooser();
+      this.router.navigate([
+        `${LstPagesMap.get(this.rule.currentPage)?.route}/${
+          LstPagesMap.get(Pages.QUESTIONS)?.route
+        }`,
+        looser,
+      ]);
+    } else {
+      this.router.navigate([
+        `${LstPagesMap.get(this.rule.currentPage)?.route}/${
+          LstPagesMap.get(Pages.QUESTIONS)?.route
+        }`,
+        0,
+      ]);
+    }
   }
 
   isEven(n: number): boolean {

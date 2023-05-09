@@ -41,9 +41,9 @@ export class ScoresService {
     }
   }
 
-  setWinner(): TeamEnum {
-    if (this.scoreKetchup < this.scoreMayo) return TeamEnum.MAYO;
-    else return TeamEnum.KETCHUP;
+  setWinner() {
+    if (this.scoreKetchup < this.scoreMayo) this.winner = TeamEnum.MAYO;
+    else this.winner = TeamEnum.KETCHUP;
   }
 
   getWinner(): TeamEnum {
