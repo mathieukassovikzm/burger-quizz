@@ -75,7 +75,7 @@ export const nuggets: IQuestionsNuggets = {
           { letter: 'C', txt: '1,69m, Comme Tom Cruise' },
           {
             letter: 'D',
-            txt: '1,73m, Comme votre présentateur préféré Alain Chabit.',
+            txt: '1,73m, Comme votre présentateur préféré, Alain Chabit.',
           },
         ],
         goodrep: 2,

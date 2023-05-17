@@ -2,17 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LstPagesMap, Pages } from './models/routes';
 
-//   {
-//     path: '/question',
-//     component: ScreenQuestion,
-//     name: 'screen-question',
-//     children: [
-//       { path: '/question/:id', component: Questions, name: 'question' },
-//     ],
-//   },
-//   { path: '*', redirect: '/' },
-// ];
-
 const routes: Routes = [
   {
     path: '',

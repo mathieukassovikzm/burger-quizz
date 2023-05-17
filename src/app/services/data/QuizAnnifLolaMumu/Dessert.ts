@@ -15,9 +15,12 @@ export const dessert: IQuestionsDessert = {
       team: TeamEnum.KETCHUP,
       category: Category,
       reponse: [
-        { name: 'Jean', imgUrl: '/assets/desserts/ganache-ketchup-rep1.jpg' },
-        { name: 'Jean', imgUrl: '/assets/desserts/ganache-ketchup-rep2.jpg' },
-        { name: 'Jean', imgUrl: '/assets/desserts/ganache-ketchup-rep3.jpg' },
+        { name: 'Maité', imgUrl: '/assets/desserts/ganache-ketchup-rep1.jpg' },
+        { name: 'Lola', imgUrl: '/assets/desserts/ganache-ketchup-rep2.jpg' },
+        {
+          name: 'Julia Roberts',
+          imgUrl: '/assets/desserts/ganache-ketchup-rep3.jpg',
+        },
       ],
     },
     {
@@ -26,9 +29,15 @@ export const dessert: IQuestionsDessert = {
       team: TeamEnum.MAYO,
       category: Category,
       reponse: [
-        { name: 'Jean', imgUrl: '/assets/desserts/ganache-mayo-rep1.jpg' },
-        { name: 'Jean', imgUrl: '/assets/desserts/ganache-mayo-rep2.jpg' },
-        { name: 'Jean', imgUrl: '/assets/desserts/ganache-mayo-rep3.jpg' },
+        {
+          name: 'Britney Spears',
+          imgUrl: '/assets/desserts/ganache-mayo-rep1.jpg',
+        },
+        {
+          name: 'Ana De Armas',
+          imgUrl: '/assets/desserts/ganache-mayo-rep2.jpg',
+        },
+        { name: 'Mumu', imgUrl: '/assets/desserts/ganache-mayo-rep3.jpg' },
       ],
     },
   ],

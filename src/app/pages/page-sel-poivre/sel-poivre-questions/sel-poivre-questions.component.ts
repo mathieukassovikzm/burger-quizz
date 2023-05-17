@@ -30,7 +30,7 @@ export class SelPoivreQuestionsComponent implements OnInit {
 
   ngOnInit() {
     this.activeRoute.params.subscribe((routeParams) => {
-      this.loadQuestion(routeParams['id']);
+      this.loadQuestion(Number(routeParams['id']));
     });
   }
 
