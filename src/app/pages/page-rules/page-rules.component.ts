@@ -40,9 +40,9 @@ export class PageRulesComponent implements OnInit {
 
   private ruleMenu: IRules = {
     currentPage: Pages.MENU,
-    game: 'Menu',
+    game: 'Menus',
     rules: [
-      '4 questions thématiques',
+      'Des questions thématiques',
       'Aucune proposition',
       '2 menus:',
       MenuKetchup,

@@ -78,7 +78,7 @@ const questionsMayo = [
     reponse: 'Le thé ou le café',
   },
   {
-    question: 'Quel est ton fils préféré ?',
+    question: 'Quel est ton petit fils préféré ?',
     category: Category,
     team: TeamEnum.MAYO,
     reponse: 'Naël ou je les aimes tous pareil !',
