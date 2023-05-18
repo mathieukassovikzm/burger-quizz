@@ -30,11 +30,11 @@ export const dessert: IQuestionsDessert = {
       category: Category,
       reponse: [
         {
-          name: 'Britney Spears',
+          name: 'Cristina Cordula',
           imgUrl: '/assets/desserts/ganache-mayo-rep1.jpg',
         },
         {
-          name: 'Ana De Armas',
+          name: 'Marion Cotillard',
           imgUrl: '/assets/desserts/ganache-mayo-rep2.jpg',
         },
         { name: 'Mumu', imgUrl: '/assets/desserts/ganache-mayo-rep3.jpg' },
