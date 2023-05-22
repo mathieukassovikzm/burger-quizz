@@ -31,7 +31,7 @@ export class PageRulesComponent implements OnInit {
     game: 'Sel / Poivre',
     rules: [
       'Quiz de rapidité',
-      '1 questions',
+      '1 question',
       '3 propositions',
       '1 seule bonne réponse',
       '1 miam par bonne réponse',

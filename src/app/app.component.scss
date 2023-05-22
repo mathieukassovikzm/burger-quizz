@@ -11,10 +11,15 @@
 }
 
 .header {
+  height: $header-h;
   padding: 5px 25px;
   border-bottom: solid 1px $color-mayo;
   display: flex;
   align-items: center;
+
+  img {
+    max-height: 80%;
+  }
 
   p {
     margin: auto;

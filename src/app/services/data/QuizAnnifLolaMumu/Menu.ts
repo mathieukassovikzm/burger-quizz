@@ -7,7 +7,7 @@ import {
 const Category = CategoriesEnum.MENU;
 
 export const MenuKetchup = 'Harry Potter';
-export const MenuMayo = 'Pluméliau';
+export const MenuMayo = 'Plumeliau';
 
 const questionKetchup = [
   {
@@ -43,18 +43,18 @@ const questionKetchup = [
 
 const questionMayo = [
   {
-    question: "Combien il y a t-il d'habitants à Pluméliau-Bieuzy ?",
+    question: "Combien y a-t-il d'habitants à Pluméliau-Bieuzy ?",
     team: TeamEnum.MAYO,
     category: Category,
     menu: MenuMayo,
     reponse: '4355',
   },
   {
-    question: "En quelle année Pluméliau et Bieuzy ont t'elles fusionnées ?",
+    question: "En quelle année Pluméliau et Bieuzy ont t'elles fusionné ?",
     team: TeamEnum.MAYO,
     category: Category,
     menu: MenuMayo,
-    reponse: '4355',
+    reponse: '2019',
   },
   {
     question: 'De quelle couleur est le blason de Pluméliau ?',
