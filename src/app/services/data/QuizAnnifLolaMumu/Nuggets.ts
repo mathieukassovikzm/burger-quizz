@@ -20,7 +20,7 @@ export const nuggets: IQuestionsNuggets = {
           },
           {
             letter: 'B',
-            txt: "C'est ce que tu dois aux impots",
+            txt: "C'est ce que tu dois aux impôts",
           },
           {
             letter: 'C',
@@ -83,13 +83,13 @@ export const nuggets: IQuestionsNuggets = {
     },
     {
       question:
-        'Combien de poil au fesses avait Toinou lors de votre première rencontre ?',
+        'Combien de poils aux fesses avait Toinou lors de votre première rencontre ?',
       category: Category,
       team: TeamEnum.KETCHUP,
       reponseProp: {
         propositions: [
           { letter: 'A', txt: '0, oui Antoine se rase' },
-          { letter: 'B', txt: "1, le survivior comme on l'appel " },
+          { letter: 'B', txt: "1, le survivior comme on l'appelle" },
           { letter: 'C', txt: '69, proportions plaisantes' },
           { letter: 'D', txt: 'Beaucoup trop...' },
         ],

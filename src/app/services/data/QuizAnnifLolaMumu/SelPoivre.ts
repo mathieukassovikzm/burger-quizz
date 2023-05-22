@@ -36,7 +36,7 @@ const questionsKetchup = [
     },
   },
   {
-    question: "Je m'appel Antoine et j'aime ploter...",
+    question: "Je m'appelle Antoine et j'aime ploter...",
     category: Category,
     reponseProp: {
       propositions: propositionsKetchup,
@@ -91,7 +91,7 @@ const questionsMayo = [
     category: Category,
     reponseProp: {
       propositions: propositionsMayo,
-      goodrep: 0,
+      goodrep: 1,
     },
   },
   {

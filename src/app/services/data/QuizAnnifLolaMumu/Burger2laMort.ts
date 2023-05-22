@@ -103,7 +103,7 @@ const questionsMayo = [
   },
   {
     question:
-      "Si Alain Chabit est l'animateur du burger quizz, comment je m'appel ?",
+      "Si Alain Chabat est l'animateur du burger quizz, comment je m'appel ?",
     category: Category,
     team: TeamEnum.MAYO,
     reponse: 'Alain Chabit',

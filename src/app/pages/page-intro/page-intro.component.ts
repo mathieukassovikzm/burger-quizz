@@ -10,7 +10,7 @@ import { IVideo } from 'src/app/models/video';
 export class PageIntroComponent implements OnInit {
   public video: IVideo = {
     redirection: `${LstPagesMap.get(Pages.EQUIPES)?.route}`,
-    videoUrl: '/assets/videos/Intro.mp4',
+    videoUrl: '/assets/videos/IntroBurgerQuizz.mp4',
   };
 
   constructor() {}
