@@ -6,7 +6,7 @@ import {
   TeamEnum,
 } from 'src/app/models/questions';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
-import { QuestionsService } from 'src/app/services/questionsService';
+import { UiService } from 'src/app/services/uiService';
 
 @Component({
   selector: 'app-sel-poivre-questions',
@@ -23,9 +23,9 @@ export class SelPoivreQuestionsComponent implements OnInit {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private questionsService: QuestionsService
+    private uiService: UiService
   ) {
-    this.selPoivreQuestion = this.questionsService.getQuestionsSelPoivre();
+    this.selPoivreQuestion = this.uiService.getQuestionsSelPoivre();
   }
 
   ngOnInit() {

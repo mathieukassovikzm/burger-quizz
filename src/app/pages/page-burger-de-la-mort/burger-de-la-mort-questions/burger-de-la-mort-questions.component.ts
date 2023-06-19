@@ -8,7 +8,7 @@ import {
   TeamEnum,
 } from 'src/app/models/questions';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
-import { QuestionsService } from 'src/app/services/questionsService';
+import { UiService } from 'src/app/services/uiService';
 import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
@@ -27,11 +27,10 @@ export class BurgerDeLaMortQuestionsComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private questionsService: QuestionsService,
+    private uiService: UiService,
     private scoresService: ScoresService
   ) {
-    this.burger2laMortQuestion =
-      this.questionsService.getQuestionsBurger2laMort();
+    this.burger2laMortQuestion = this.uiService.getQuestionsBurger2laMort();
   }
 
   ngOnInit() {

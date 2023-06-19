@@ -7,7 +7,7 @@ import {
   TeamEnum,
 } from 'src/app/models/questions';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
-import { QuestionsService } from 'src/app/services/questionsService';
+import { UiService } from 'src/app/services/uiService';
 
 @Component({
   selector: 'app-menu-questions',
@@ -25,9 +25,9 @@ export class MenuQuestionsComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private questionsService: QuestionsService
+    private uiService: UiService
   ) {
-    this.menuQuestion = this.questionsService.getQuestionsMenu();
+    this.menuQuestion = this.uiService.getQuestionsMenu();
   }
 
   ngOnInit() {

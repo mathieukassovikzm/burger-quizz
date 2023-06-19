@@ -7,7 +7,7 @@ import {
   TeamEnum,
 } from 'src/app/models/questions';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
-import { QuestionsService } from 'src/app/services/questionsService';
+import { UiService } from 'src/app/services/uiService';
 
 @Component({
   selector: 'app-nuggets-questions',
@@ -25,9 +25,9 @@ export class NuggetsQuestionsComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private questionsService: QuestionsService
+    private uiService: UiService
   ) {
-    this.nuggetsQuestion = this.questionsService.getQuestionsNuggets();
+    this.nuggetsQuestion = this.uiService.getQuestionsNuggets();
   }
 
   ngOnInit() {

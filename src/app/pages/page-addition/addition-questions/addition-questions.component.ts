@@ -10,7 +10,7 @@ import {
 } from 'src/app/models/questions';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { additionTheme } from 'src/app/services/data/QuizAnnifLolaMumu/Addition';
-import { QuestionsService } from 'src/app/services/questionsService';
+import { UiService } from 'src/app/services/uiService';
 import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
@@ -30,10 +30,10 @@ export class AdditionQuestionsComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private questionsService: QuestionsService,
+    private uiService: UiService,
     private scoresService: ScoresService
   ) {
-    this.addtionQuestion = this.questionsService.getQuestionsAddition();
+    this.addtionQuestion = this.uiService.getQuestionsAddition();
   }
 
   ngOnInit() {
