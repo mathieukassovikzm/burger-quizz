@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 
 @Component({
-  selector: 'app-page-equipes',
-  templateUrl: './page-equipes.component.html',
-  styleUrls: ['./page-equipes.component.scss'],
+    selector: 'app-page-equipes',
+    templateUrl: './page-equipes.component.html',
+    styleUrls: ['./page-equipes.component.scss'],
+    standalone: false
 })
 export class PageEquipesComponent implements OnInit {
   constructor(private router: Router) {}

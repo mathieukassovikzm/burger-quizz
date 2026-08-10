@@ -9,8 +9,9 @@ import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
-  selector: 'app-sel-poivre-questions',
-  templateUrl: './sel-poivre-questions.component.html',
+    selector: 'app-sel-poivre-questions',
+    templateUrl: './sel-poivre-questions.component.html',
+    standalone: false
 })
 export class SelPoivreQuestionsComponent implements OnInit {
   public ketchup = TeamEnum.KETCHUP;

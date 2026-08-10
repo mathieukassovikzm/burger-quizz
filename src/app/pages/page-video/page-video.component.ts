@@ -5,8 +5,9 @@ import { IVideo } from 'src/app/models/video';
 import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
-  selector: 'app-page-video',
-  templateUrl: './page-video.component.html',
+    selector: 'app-page-video',
+    templateUrl: './page-video.component.html',
+    standalone: false
 })
 export class PageVideoComponent implements OnInit {
   public videoNuggets: IVideo = {

@@ -14,8 +14,9 @@ import { UiService } from 'src/app/services/uiService';
 import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
-  selector: 'app-addition-questions',
-  templateUrl: './addition-questions.component.html',
+    selector: 'app-addition-questions',
+    templateUrl: './addition-questions.component.html',
+    standalone: false
 })
 export class AdditionQuestionsComponent implements OnInit, OnDestroy {
   public ketchup = TeamEnum.KETCHUP;

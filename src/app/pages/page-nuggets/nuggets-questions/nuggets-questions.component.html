@@ -6,11 +6,13 @@
     </div>
     <div class="container-rep">
       <ul class="reponses">
-        <li class="rep" [class.goodrep]="isGoodRep(i)"
-          *ngFor="let item of question!.reponseProp!.propositions; let i = index">
-          <h3>{{item.letter}}</h3>
-          <p>{{item.txt}}</p>
-        </li>
+        @for (item of question!.reponseProp!.propositions; track item; let i = $index) {
+          <li class="rep" [class.goodrep]="isGoodRep(i)"
+            >
+            <h3>{{item.letter}}</h3>
+            <p>{{item.txt}}</p>
+          </li>
+        }
       </ul>
     </div>
     <div class="buttons">

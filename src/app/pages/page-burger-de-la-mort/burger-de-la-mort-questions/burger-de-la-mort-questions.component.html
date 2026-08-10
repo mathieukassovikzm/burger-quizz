@@ -10,29 +10,38 @@
     </div>
   </div>
 
-  <div class="questions" *ngIf="showAnswer">
-    <div class="panel-l">
-      <div class="question" *ngFor="let item of currentQuestions; let i = index ">
-        <div class=" divif" *ngIf="i<5">
-          <h2>{{i+1}}</h2>
-          <div class="g-q-r">
-            <p class="q">{{item.question}}</p>
-            <p class="r">Réponse: {{item.reponse}}</p>
+  @if (showAnswer) {
+    <div class="questions">
+      <div class="panel-l">
+        @for (item of currentQuestions; track item; let i = $index) {
+          <div class="question">
+            @if (i<5) {
+              <div class=" divif">
+                <h2>{{i+1}}</h2>
+                <div class="g-q-r">
+                  <p class="q">{{item.question}}</p>
+                  <p class="r">Réponse: {{item.reponse}}</p>
+                </div>
+              </div>
+            }
           </div>
-        </div>
+        }
+      </div>
+      <div class="panel-r">
+        @for (item of currentQuestions; track item; let i = $index) {
+          <div class="question">
+            @if (5<=i) {
+              <div class="divif">
+                <h2>{{i+1}}</h2>
+                <div class="g-q-r">
+                  <p class="q">{{item.question}}</p>
+                  <p class="r">Réponse: {{item.reponse}}</p>
+                </div>
+              </div>
+            }
+          </div>
+        }
       </div>
     </div>
-
-    <div class="panel-r">
-      <div class="question" *ngFor="let item of currentQuestions; let i = index ">
-        <div class="divif" *ngIf="5<=i">
-          <h2>{{i+1}}</h2>
-          <div class="g-q-r">
-            <p class="q">{{item.question}}</p>
-            <p class="r">Réponse: {{item.reponse}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  }
 </div>
