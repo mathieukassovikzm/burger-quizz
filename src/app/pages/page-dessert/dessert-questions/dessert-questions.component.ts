@@ -10,8 +10,9 @@ import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
-  selector: 'app-dessert-questions',
-  templateUrl: './dessert-questions.component.html',
+    selector: 'app-dessert-questions',
+    templateUrl: './dessert-questions.component.html',
+    standalone: false
 })
 export class DessertQuestionsComponent implements OnInit, OnDestroy {
   public ketchup = TeamEnum.KETCHUP;

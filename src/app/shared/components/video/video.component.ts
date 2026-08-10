@@ -4,9 +4,10 @@ import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { IVideo } from 'src/app/models/video';
 
 @Component({
-  selector: 'app-video',
-  templateUrl: './video.component.html',
-  styleUrls: ['./video.component.scss']
+    selector: 'app-video',
+    templateUrl: './video.component.html',
+    styleUrls: ['./video.component.scss'],
+    standalone: false
 })
 export class VideoComponent implements OnInit {
   @Input() video: IVideo = {};

@@ -11,8 +11,9 @@ import { ScoresService } from 'src/app/services/scoresService';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
-  selector: 'app-page-rules',
-  templateUrl: './page-rules.component.html',
+    selector: 'app-page-rules',
+    templateUrl: './page-rules.component.html',
+    standalone: false
 })
 export class PageRulesComponent implements OnInit {
   private ruleNuggets: IRules = {

@@ -16,11 +16,11 @@ $txt-dark: #000;
 /*******************************
  * General
  *******************************/
-$base-size-s: rem(14);
-$base-size-m: rem(16);
-$base-size-l: rem(20);
-$base-size-xl: rem(35);
-$base-size-xxl: rem(40);
+$base-size-s: to-rem(14);
+$base-size-m: to-rem(16);
+$base-size-l: to-rem(20);
+$base-size-xl: to-rem(35);
+$base-size-xxl: to-rem(40);
 
 /**********************************
  * Header

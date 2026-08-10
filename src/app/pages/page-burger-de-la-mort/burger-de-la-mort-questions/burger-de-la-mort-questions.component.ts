@@ -12,8 +12,9 @@ import { UiService } from 'src/app/services/uiService';
 import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
-  selector: 'app-burger-de-la-mort-questions',
-  templateUrl: './burger-de-la-mort-questions.component.html',
+    selector: 'app-burger-de-la-mort-questions',
+    templateUrl: './burger-de-la-mort-questions.component.html',
+    standalone: false
 })
 export class BurgerDeLaMortQuestionsComponent implements OnInit, OnDestroy {
   public ketchup = TeamEnum.KETCHUP;

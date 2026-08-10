@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-page-dessert',
-  templateUrl: './page-dessert.component.html',
+    selector: 'app-page-dessert',
+    templateUrl: './page-dessert.component.html',
+    standalone: false
 })
 export class PageDessertComponent implements OnInit {
   constructor() {}

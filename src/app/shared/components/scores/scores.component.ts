@@ -4,9 +4,10 @@ import { TeamEnum } from 'src/app/models/questions';
 import { ScoresService } from 'src/app/services/scoresService';
 
 @Component({
-  selector: 'app-scores',
-  templateUrl: './scores.component.html',
-  styleUrls: ['./scores.component.scss'],
+    selector: 'app-scores',
+    templateUrl: './scores.component.html',
+    styleUrls: ['./scores.component.scss'],
+    standalone: false
 })
 export class ScoresComponent implements OnInit, OnDestroy {
   @Input() team?: TeamEnum;

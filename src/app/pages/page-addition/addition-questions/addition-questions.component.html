@@ -7,9 +7,11 @@
     </div>
     <div class="container-rep">
       <ul class="reponses">
-        <li class="rep" *ngIf="showAnswer">
-          <p>{{question?.reponse}}</p>
-        </li>
+        @if (showAnswer) {
+          <li class="rep">
+            <p>{{question?.reponse}}</p>
+          </li>
+        }
       </ul>
     </div>
     <div class="buttons">

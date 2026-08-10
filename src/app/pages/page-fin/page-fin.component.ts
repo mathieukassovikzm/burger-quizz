@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
-  selector: 'app-page-fin',
-  templateUrl: './page-fin.component.html',
-  styleUrls: ['./page-fin.component.scss'],
+    selector: 'app-page-fin',
+    templateUrl: './page-fin.component.html',
+    styleUrls: ['./page-fin.component.scss'],
+    standalone: false
 })
 export class PageFinComponent implements OnInit {
   public txtFin;

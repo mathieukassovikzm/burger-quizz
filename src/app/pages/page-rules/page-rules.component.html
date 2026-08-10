@@ -1,8 +1,10 @@
 <div class="rules">
   <h1>{{rule.game}}</h1>
   <h2>Les règles</h2>
-  <p [class.ketchup]="isEven(i)" [class.mayo]="!isEven(i)" *ngFor="let item of rule.rules;let i= index">
-    {{item}}
-  </p>
+  @for (item of rule.rules; track item; let i = $index) {
+    <p [class.ketchup]="isEven(i)" [class.mayo]="!isEven(i)">
+      {{item}}
+    </p>
+  }
   <button type="button" name="button" (click)="goToNextPage()">C'est compris?</button>
 </div>
