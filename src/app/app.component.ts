@@ -9,6 +9,7 @@ import { UiService } from './services/uiService';
 })
 export class AppComponent {
   title = 'burger-quizz';
+  public headerTitle = this.uiService.getTitle();
   public playerKetchup = this.uiService.playerKetchup;
   public playerMayo = this.uiService.playerMayo;
   constructor(private uiService: UiService) {}

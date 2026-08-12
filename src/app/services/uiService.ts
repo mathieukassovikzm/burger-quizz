@@ -14,8 +14,14 @@ import {
   menu,
   nuggets,
   selPoivre,
-} from './data/QuizAnnifTemplate/index';
-import { playerKetchup, playerMayo, txtFin } from './data/QuizAnnifTemplate/ui';
+} from './data/QuizLuluJuju';
+import {
+  title,
+  playerKetchup,
+  playerMayo,
+  txtFin,
+  introVideoUrl,
+} from './data/QuizLuluJuju/ui';
 
 @Injectable({
   providedIn: 'root',
@@ -25,8 +31,12 @@ export class UiService {
   public playerKetchup = playerKetchup;
   public playerMayo = playerMayo;
   public txtFin = txtFin;
+  public introVideoUrl = introVideoUrl;
   constructor() {}
 
+  getTitle(): string {
+    return title;
+  }
   getQuestionsNuggets(): IQuestionsNuggets {
     return nuggets;
   }

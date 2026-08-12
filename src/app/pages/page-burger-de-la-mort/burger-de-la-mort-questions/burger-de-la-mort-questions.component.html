@@ -6,7 +6,7 @@
     </div>
     <div class="buttons">
       <button type="button" name="button" (click)="showReponse()">Reponse</button>
-      <button type="button" name="button" (click)="nextQuestion()">Next</button>
+      <button type="button" name="button" [disabled]="!showAnswer" (click)="nextQuestion()">Next</button>
     </div>
   </div>
 
