@@ -8,6 +8,15 @@
       &:hover {
         color: $txt-dark;
       }
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+
+        &:hover {
+          color: $teamLightColor;
+        }
+      }
     }
   }
 
@@ -49,9 +58,19 @@
       color: $txt-primary;
       font-family: "fontBurgerQuizzTitle";
       font-size: 4rem;
+      transition: opacity 0.2s, color 0.2s;
 
       &:hover {
         color: $segundary;
+      }
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+
+        &:hover {
+          color: $txt-primary;
+        }
       }
     }
   }

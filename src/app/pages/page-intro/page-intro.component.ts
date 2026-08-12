@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { IVideo } from 'src/app/models/video';
+import { UiService } from 'src/app/services/uiService';
 
 @Component({
     selector: 'app-page-intro',
@@ -9,12 +10,14 @@ import { IVideo } from 'src/app/models/video';
     standalone: false
 })
 export class PageIntroComponent implements OnInit {
-  public video: IVideo = {
-    redirection: `${LstPagesMap.get(Pages.EQUIPES)?.route}`,
-    videoUrl: '/assets/videos/IntroBurgerQuizz.mp4',
-  };
+  public video: IVideo;
 
-  constructor() {}
+  constructor(private uiService: UiService) {
+    this.video = {
+      redirection: `${LstPagesMap.get(Pages.EQUIPES)?.route}`,
+      videoUrl: this.uiService.introVideoUrl,
+    };
+  }
 
   ngOnInit() {}
 }

@@ -18,7 +18,7 @@
       <button type="button" name="button" (click)="showReponse()">
         Reponse
       </button>
-      <button type="button" name="button" (click)="nextQuestion()">
+      <button type="button" name="button" [disabled]="!showAnswer" (click)="nextQuestion()">
         Next
       </button>
     </div>
