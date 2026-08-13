@@ -15,7 +15,7 @@ export const dessert: IQuestionsDessert = {
   questions: [
     {
       question: 'A qui appartient ces 3 visages?',
-      imgUrl: '/assets/desserts/ganache-ketchup.jpg',
+      imgUrl: '/assets/desserts/ganache-ketchup.png',
       team: TeamEnum.KETCHUP,
       category: Category,
       reponse: [
@@ -26,7 +26,7 @@ export const dessert: IQuestionsDessert = {
     },
     {
       question: 'A qui appartient ces 3 visages?',
-      imgUrl: '/assets/desserts/ganache-mayo.jpg',
+      imgUrl: '/assets/desserts/ganache-mayo.png',
       team: TeamEnum.MAYO,
       category: Category,
       reponse: [
