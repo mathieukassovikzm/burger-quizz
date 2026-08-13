@@ -21,7 +21,7 @@ export const dessert: IQuestionsDessert = {
       reponse: [
         { name: 'Prince Charles', imgUrl: '/assets/desserts/ganache-ketchup-rep1.jpg' },
         { name: 'Juju', imgUrl: '/assets/desserts/ganache-ketchup-rep2.jpg' },
-        { name: 'George Clooney', imgUrl: '/assets/desserts/ganache-ketchup-rep3.jpg' },
+        { name: 'George Clooney', imgUrl: '/assets/desserts/ganache-ketchup-rep3.jpeg' },
       ],
     },
     {
