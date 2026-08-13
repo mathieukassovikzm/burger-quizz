@@ -22,7 +22,7 @@ import {
   txtFin,
   introVideoUrl,
 } from './data/QuizLuluJuju/ui';
-
+import { MenuKetchup, MenuMayo } from './data/QuizLuluJuju/Menu';
 @Injectable({
   providedIn: 'root',
 })
@@ -32,7 +32,10 @@ export class UiService {
   public playerMayo = playerMayo;
   public txtFin = txtFin;
   public introVideoUrl = introVideoUrl;
-  constructor() {}
+  public menuKetchup = MenuKetchup;
+  public menuMayo = MenuMayo;
+
+  constructor() { }
 
   getTitle(): string {
     return title;

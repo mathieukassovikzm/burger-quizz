@@ -19,9 +19,9 @@ export const dessert: IQuestionsDessert = {
       team: TeamEnum.KETCHUP,
       category: Category,
       reponse: [
-        { name: 'À compléter', imgUrl: '/assets/desserts/ganache-ketchup-rep1.jpg' },
-        { name: 'À compléter', imgUrl: '/assets/desserts/ganache-ketchup-rep2.jpg' },
-        { name: 'À compléter', imgUrl: '/assets/desserts/ganache-ketchup-rep3.jpg' },
+        { name: 'Prince Charles', imgUrl: '/assets/desserts/ganache-ketchup-rep1.jpg' },
+        { name: 'Juju', imgUrl: '/assets/desserts/ganache-ketchup-rep2.jpg' },
+        { name: 'George Clooney', imgUrl: '/assets/desserts/ganache-ketchup-rep3.jpg' },
       ],
     },
     {
@@ -30,9 +30,9 @@ export const dessert: IQuestionsDessert = {
       team: TeamEnum.MAYO,
       category: Category,
       reponse: [
-        { name: 'À compléter', imgUrl: '/assets/desserts/ganache-mayo-rep1.jpg' },
-        { name: 'À compléter', imgUrl: '/assets/desserts/ganache-mayo-rep2.jpg' },
-        { name: 'À compléter', imgUrl: '/assets/desserts/ganache-mayo-rep3.jpg' },
+        { name: 'Claire Chazal', imgUrl: '/assets/desserts/ganache-mayo-rep1.jpg' },
+        { name: 'Rihanna', imgUrl: '/assets/desserts/ganache-mayo-rep2.jpg' },
+        { name: 'Lulu', imgUrl: '/assets/desserts/ganache-mayo-rep3.jpg' },
       ],
     },
   ],

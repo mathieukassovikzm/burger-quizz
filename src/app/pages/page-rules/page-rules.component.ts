@@ -3,17 +3,13 @@ import { Router } from '@angular/router';
 import { LstPagesMap, Pages } from 'src/app/models/routes';
 import { IRules } from 'src/app/models/rules';
 import { additionTheme } from 'src/app/services/data/QuizAnnifLolaMumu/Addition';
-import {
-  MenuKetchup,
-  MenuMayo,
-} from 'src/app/services/data/QuizAnnifLolaMumu/Menu';
 import { ScoresService } from 'src/app/services/scoresService';
 import { UiService } from 'src/app/services/uiService';
 
 @Component({
-    selector: 'app-page-rules',
-    templateUrl: './page-rules.component.html',
-    standalone: false
+  selector: 'app-page-rules',
+  templateUrl: './page-rules.component.html',
+  standalone: false
 })
 export class PageRulesComponent implements OnInit {
   private ruleNuggets: IRules = {
@@ -46,8 +42,8 @@ export class PageRulesComponent implements OnInit {
       'Des questions thématiques',
       'Aucune proposition',
       '2 menus:',
-      MenuKetchup,
-      MenuMayo,
+      this.uiService.menuKetchup,
+      this.uiService.menuMayo,
       '1 miam par bonne réponse',
     ],
   };
@@ -90,7 +86,10 @@ export class PageRulesComponent implements OnInit {
   public currentRoute = '';
   private isBurgerDeLaMort = false;
 
-  constructor(private router: Router, private scoresService: ScoresService) {}
+  constructor(
+    private router: Router,
+    private uiService: UiService,
+    private scoresService: ScoresService) { }
 
   ngOnInit() {
     this.currentRoute = this.router.url.slice(1).replace(`/rules`, '');
@@ -124,15 +123,13 @@ export class PageRulesComponent implements OnInit {
       // On récupère le looser qui joue le Burger de la mort en premier
       const looser = this.scoresService.getLooser();
       this.router.navigate([
-        `${LstPagesMap.get(this.rule.currentPage)?.route}/${
-          LstPagesMap.get(Pages.QUESTIONS)?.route
+        `${LstPagesMap.get(this.rule.currentPage)?.route}/${LstPagesMap.get(Pages.QUESTIONS)?.route
         }`,
         looser,
       ]);
     } else {
       this.router.navigate([
-        `${LstPagesMap.get(this.rule.currentPage)?.route}/${
-          LstPagesMap.get(Pages.QUESTIONS)?.route
+        `${LstPagesMap.get(this.rule.currentPage)?.route}/${LstPagesMap.get(Pages.QUESTIONS)?.route
         }`,
         0,
       ]);
