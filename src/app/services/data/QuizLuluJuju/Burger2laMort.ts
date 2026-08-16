@@ -107,7 +107,7 @@ const questionsMayo = [
     reponse: 'Jo',
   },
   {
-    question: 'Si on me coupe 6 doigts, combien m’en reste-t-il ?',
+    question: 'Si on me coupe 6 doigts à une main, combien m’en reste-t-il ?',
     category: Category,
     team: TeamEnum.MAYO,
     reponse: '0',

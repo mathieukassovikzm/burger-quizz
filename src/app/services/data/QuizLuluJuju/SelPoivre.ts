@@ -14,7 +14,7 @@ const propositionsMachine = <IProposition[]>[
 
 const propositionsLuciole = <IProposition[]>[
   { letter: 'A', txt: 'Une luciole' },
-  { letter: 'B', txt: 'La Marié' },
+  { letter: 'B', txt: 'La Mariée' },
   { letter: 'C', txt: 'Les deux' },
 ];
 
@@ -30,7 +30,7 @@ const questionsMachine = [
     reponseProp: { propositions: propositionsMachine, goodrep: 2 },
   },
   {
-    question: 'Peut faire un chocolat chaud aux enfant.',
+    question: 'Peut faire un chocolat chaud aux enfants.',
     category: Category,
     reponseProp: { propositions: propositionsMachine, goodrep: 0 },
   },
@@ -53,7 +53,7 @@ const questionsMachine = [
 
 const questionsLuciole = [
   {
-    question: 'A les fesses qui billent dans le noir.',
+    question: 'A les fesses qui brillent dans le noir.',
     category: Category,
     reponseProp: { propositions: propositionsLuciole, goodrep: 0 },
   },
