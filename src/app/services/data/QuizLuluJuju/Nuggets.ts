@@ -46,7 +46,7 @@ export const nuggets: IQuestionsNuggets = {
           { letter: 'A', txt: '74 ans' },
           { letter: 'B', txt: '84 ans' },
           { letter: 'C', txt: '94 ans' },
-          { letter: 'D', txt: 'Honte.' },
+          { letter: 'D', txt: 'Honte' },
         ],
         goodrep: 3,
       },

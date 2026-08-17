@@ -16,7 +16,7 @@ export class PageRulesComponent implements OnInit {
     currentPage: Pages.NUGGETS,
     game: 'Nuggets',
     rules: [
-      '1 questions',
+      '1 question',
       '4 propositions',
       '1 seule bonne réponse',
       '1 miam par bonne réponse',

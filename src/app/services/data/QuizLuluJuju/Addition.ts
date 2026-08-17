@@ -27,9 +27,9 @@ export const addition: IQuestionsAddition = {
       reponse: 'Crac-crac',
     },
     {
-      question: "Beaucoup d'invités en ont un tout petit ce soir...",
+      question: "Riri, Fifi...",
       category: Category,
-      reponse: 'Kiki',
+      reponse: 'Loulou',
     },
     {
       question: 'Pan pan...',
